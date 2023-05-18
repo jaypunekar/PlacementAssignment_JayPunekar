@@ -26,8 +26,27 @@ for value, key in word_dict.items():
 
 #Printing the most frequent word/words
 if len(most_frequent) == 1:
-    print(f'The most frequently occuring word is "{most_frequent[0]}" and its frequency is "{word_dict[most_frequent[0]]}"')
+    print(word_dict[most_frequent[0]])
+    # print(f'The most frequently occuring word is "{most_frequent[0]}" and its frequency is "{word_dict[most_frequent[0]]}"')
 else:
-    print(f'The most frequently occuring words are "{most_frequent}" and their frequency is "{word_dict[Keymax]}"')
+    print(word_dict[Keymax])
+    # print(f'The most frequently occuring words are "{most_frequent}" and their frequency is "{word_dict[Keymax]}"')
 
 
+"""
+Test Case 1:
+
+Input: my name my is name
+Output: 2
+
+Explaination: "my" and "name" occur twice
+"""
+
+"""
+Test Case 2:
+
+Input: it is is cold cold cold tonight
+Output: 3
+
+Explaination: "cold" occurs three times
+"""

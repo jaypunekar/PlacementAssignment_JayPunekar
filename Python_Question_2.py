@@ -23,9 +23,19 @@ class VaildString:
             for char, freq in char_dict.items():
                 if freq != first_char_freq:
                     is_same = False
-                    return is_same
+            #If is_same is False then we remove the first character and check again
+            #(Note:- The code is written differently but we get correct answer)
+            if not is_same:
+                is_same = True
+                del char_dict[self.given_string[0]]
+                for char, freq in char_dict.items():
+                    if freq != first_char_freq - 1:
+                        is_same = False
+            
             return is_same
+
         except Exception:
+            raise Exception
             print("There was an Error")
 
     def print_validity(self, result:bool):
@@ -43,3 +53,20 @@ string = input("Enter a string: ")
 string_validity = VaildString(string)
 string_validity.print_validity(string_validity.check_validity())
 
+"""
+Test Case 1:
+
+Input: aabc
+Output: YES
+
+Explaination: if we remove the first character the condition for validity is met.
+"""
+
+"""
+Test Case 2:
+
+Input: abbc
+Output: NO
+
+Explaination: Deletion of only first character is allowed. So we get NO.
+"""
