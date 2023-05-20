@@ -1,4 +1,6 @@
 class VaildString:
+    
+    #Constructor takes in the string that has to be validated
     def __init__(self, given_string):
         self.given_string = given_string
 
